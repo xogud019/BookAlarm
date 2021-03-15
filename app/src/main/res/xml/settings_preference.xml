@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="설정">
+        <SwitchPreference
+            android:key="sp1_set"
+            android:title="night mode"/>
+
+        <PreferenceScreen
+            android:key="ps1_set"
+            android:title="알람 설정"
+            >
+
+            <SwitchPreference
+                android:defaultValue="false"
+                android:key="sp2_set"
+                android:title="알람 설정"/>
+
+            <ListPreference
+                android:entries="@array/alarm"
+                android:entryValues="@array/alarm"
+                android:key="lp1_set"
+                android:title="알람 시간"
+                android:dependency="sp2_set"
+                />
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+</PreferenceScreen>
