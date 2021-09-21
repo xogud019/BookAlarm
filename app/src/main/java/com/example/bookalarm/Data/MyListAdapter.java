@@ -62,10 +62,8 @@ public class MyListAdapter extends BaseAdapter {
 
         Log.d("xogud","outgetView");
         if(list_itemArrayList.get(position).getTitle()!=null)
-            if(list_itemArrayList.get(position).getTitle().length()>10){
-                viewHolder.title_id.setText(list_itemArrayList.get(position).getTitle().substring(0,10));
-            }
-            else viewHolder.title_id.setText(list_itemArrayList.get(position).getTitle());
+        if(list_itemArrayList.get(position).getTitle().length()>10) viewHolder.title_id.setText(list_itemArrayList.get(position).getTitle().substring(0,10));
+        else viewHolder.title_id.setText(list_itemArrayList.get(position).getTitle());
         viewHolder.price_id.setText(list_itemArrayList.get(position).getPriceStandard());
         viewHolder.salesPrice_id.setText(list_itemArrayList.get(position).getPriceSales());
         if(list_itemArrayList.get(position).getPubDate()!=null) viewHolder.pub_id.setText(list_itemArrayList.get(position).getPubDate());
